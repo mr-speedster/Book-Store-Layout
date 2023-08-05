@@ -15,11 +15,17 @@
     <link rel="stylesheet" href="./style.css">
 
     <title>Flourish and Blotts</title>
+    <script>
+      function hidePreloader() {
+        const preloader = document.getElementById('preloader');
+        preloader.style.display = 'none';
+      }
+      window.addEventListener('load', hidePreloader);
+    </script>
     <style>
         body{
-            /* background-image: url(./images/background.jpg); */
+            background-image: url(./images/background.jpg);
             background-repeat: none;
-            background-color: white;
         }
         .image-2{
             border-radius: 60%;
@@ -31,6 +37,8 @@
             left: 0;
             width: 100%;
             height: 100%;
+            background-color: white;
+            z-index: 9999;
         }
         #loader {
             display: block;
@@ -226,9 +234,6 @@
     <footer>
     </footer>
 
-    <script>
-      
-    </script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
